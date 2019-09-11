@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtAltura;
     private EditText txtIdade;
     private TextView txtResultado;
+    private ImageView imgResultado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +41,17 @@ public class MainActivity extends AppCompatActivity {
         altura = Double.parseDouble(txtAltura.getText().toString());
         resultado = peso / (altura * altura);
         if (resultado < 18.5) {
-            this.txtResultado.setText("Mago");
+            this.txtResultado.setText("Magro");
+            imgResultado.setImageResource(R.drawable.magro);
         } else if (resultado > 18.5 && resultado < 24.9){
           this.txtResultado.setText("Normal");
+          imgResultado.setImageResource(R.drawable.normal);
         }else if (resultado >= 24.9 && resultado < 29.9){
             this.txtResultado.setText("Acima do peso");
+            imgResultado.setImageResource(R.drawable.acimadopeso);
         }else {
-            this.txtResultado.setText("Baleia");
+            this.txtResultado.setText("Obeso");
+            imgResultado.setImageResource(R.drawable.obeso);
         }
     }
 }
