@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         this.txtAltura = findViewById(R.id.txtAltura);
         this.txtPeso = findViewById(R.id.txtPeso);
         this.txtResultado = findViewById(R.id.txtResultado);
+        this.imgResultado = findViewById(R.id.imgResultado);
 
   /*  }
     public void btnVerificarOnClick(View view){
