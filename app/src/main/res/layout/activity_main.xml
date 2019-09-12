@@ -31,7 +31,9 @@
                 android:text="Selecione o sexo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
             <Spinner
+                android:id="@+id/opcSexo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/opcsexo"></Spinner>
@@ -55,6 +57,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:text="Verificar"
+                android:onClick="calcIMC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
